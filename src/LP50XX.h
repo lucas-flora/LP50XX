@@ -23,7 +23,7 @@ enum LED_Configuration {
     BGR,
     RBG,
     GBR,
-    BRG,
+    BRG
 };
 
 enum LP50XX_LEDS {
@@ -120,14 +120,14 @@ class LP50XX
         void SetBankColorA(uint8_t value, EAddressType addressType = EAddressType::Normal);
         void SetBankColorB(uint8_t value, EAddressType addressType = EAddressType::Normal);
         void SetBankColorC(uint8_t value, EAddressType addressType = EAddressType::Normal);
-        void SetBankColor(uint8_t red, uint8_t green, uint8_t blue, EAddressType addressType = EAddressType::Normal);
+        void SetBankColor(uint8_t r, uint8_t g, uint8_t b, EAddressType addressType = EAddressType::Normal);
 
         /**
          * Output control functions
          */
         void SetLEDBrightness(uint8_t led, uint8_t brighness, EAddressType addressType = EAddressType::Normal);
         void SetOutputColor(uint8_t output, uint8_t value, EAddressType addressType = EAddressType::Normal);
-        void SetLEDColor(uint8_t led, uint8_t red, uint8_t green, uint8_t blue, EAddressType addressType = EAddressType::Normal);
+        void SetLEDColor(uint8_t led, uint8_t r, uint8_t g, uint8_t b, EAddressType addressType = EAddressType::Normal);
 
 
         /**

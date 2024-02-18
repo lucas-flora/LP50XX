@@ -316,46 +316,46 @@ void LP50XX::SetBankColorC(uint8_t value, EAddressType addressType) {
 /**
  * @brief Sets the BANK color according to the set LED configuration @ref SetLEDConfiguration
  * 
- * @param red The red color value from 0 to 0xFF
- * @param green The green color value from 0 to 0xFF
- * @param blue The blue color value from 0 to 0xFF
+ * @param r The red color value from 0 to 0xFF
+ * @param g The green color value from 0 to 0xFF
+ * @param b The blue color value from 0 to 0xFF
  * @param addressType the I2C address type to write to
  */
-void LP50XX::SetBankColor(uint8_t red, uint8_t green, uint8_t blue, EAddressType addressType) {
+void LP50XX::SetBankColor(uint8_t r, uint8_t g, uint8_t b, EAddressType addressType) {
     SetAutoIncrement(AUTO_INC_ON);
 
     uint8_t buff[3];
     switch (_led_configuration)
     {
     case RGB:
-        buff[0] = red;
-        buff[1] = green;
-        buff[2] = blue;
+        buff[0] = r;
+        buff[1] = g;
+        buff[2] = b;
         break;
     case GRB:
-        buff[0] = green;
-        buff[1] = red;
-        buff[2] = blue;
+        buff[0] = g;
+        buff[1] = r;
+        buff[2] = b;
         break;
     case BGR:
-        buff[0] = blue;
-        buff[1] = green;
-        buff[2] = red;
+        buff[0] = b;
+        buff[1] = g;
+        buff[2] = r;
         break;
     case RBG:
-        buff[0] = red;
-        buff[1] = blue;
-        buff[2] = green;
+        buff[0] = r;
+        buff[1] = b;
+        buff[2] = g;
         break;
     case GBR:
-        buff[0] = green;
-        buff[1] = blue;
-        buff[2] = red;
+        buff[0] = g;
+        buff[1] = b;
+        buff[2] = r;
         break;
     case BRG:
-        buff[0] = blue;
-        buff[1] = red;
-        buff[2] = green;
+        buff[0] = b;
+        buff[1] = r;
+        buff[2] = g;
         break;
     }
 
@@ -391,46 +391,46 @@ void LP50XX::SetOutputColor(uint8_t output, uint8_t value, EAddressType addressT
  * @brief Sets the LED color according to the set LED configuration @ref SetLEDConfiguration
  * 
  * @param led The led to set. 0..3
- * @param red The red color value from 0 to 0xFF
- * @param green The green color value from 0 to 0xFF
- * @param blue The blue color value from 0 to 0xFF
+ * @param r The red color value from 0 to 0xFF
+ * @param g The green color value from 0 to 0xFF
+ * @param b The blue color value from 0 to 0xFF
  * @param addressType the I2C address type to write to
  */
-void LP50XX::SetLEDColor(uint8_t led, uint8_t red, uint8_t green, uint8_t blue, EAddressType addressType) {
+void LP50XX::SetLEDColor(uint8_t led, uint8_t r, uint8_t g, uint8_t b, EAddressType addressType) {
     SetAutoIncrement(AUTO_INC_ON);
 
     uint8_t buff[3];
     switch (_led_configuration)
     {
     case RGB:
-        buff[0] = red;
-        buff[1] = green;
-        buff[2] = blue;
+        buff[0] = r;
+        buff[1] = g;
+        buff[2] = b;
         break;
     case GRB:
-        buff[0] = green;
-        buff[1] = red;
-        buff[2] = blue;
+        buff[0] = g;
+        buff[1] = r;
+        buff[2] = b;
         break;
     case BGR:
-        buff[0] = blue;
-        buff[1] = green;
-        buff[2] = red;
+        buff[0] = b;
+        buff[1] = g;
+        buff[2] = r;
         break;
     case RBG:
-        buff[0] = red;
-        buff[1] = blue;
-        buff[2] = green;
+        buff[0] = r;
+        buff[1] = b;
+        buff[2] = g;
         break;
     case GBR:
-        buff[0] = green;
-        buff[1] = blue;
-        buff[2] = red;
+        buff[0] = g;
+        buff[1] = b;
+        buff[2] = r;
         break;
     case BRG:
-        buff[0] = blue;
-        buff[1] = red;
-        buff[2] = green;
+        buff[0] = b;
+        buff[1] = r;
+        buff[2] = g;
         break;
     }
 
