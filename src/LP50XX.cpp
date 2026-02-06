@@ -2,7 +2,7 @@
  * @file LP50XX.cpp
  * @author rneurink (ruben.neurink@gmail.com)
  * @brief 
- * @version 1.0
+ * @version 1.0.1
  * @date 2021-07-04
  * 
  * @copyright Copyright (c) 2021
@@ -375,7 +375,7 @@ void LP50XX::SetBankColor(uint8_t r, uint8_t g, uint8_t b, EAddressType addressT
  * @param addressType the I2C address type to write to
  */
 void LP50XX::SetLEDBrightness(uint8_t led, uint8_t brighness, EAddressType addressType) {
-    i2c_write_byte(getAddress(addressType), LED0_BRIGHTNESS + led, brighness);
+    i2c_write_byte(getAddress(addressType),  LED0_BRIGHTNESS+ led, brighness);
 }
 
 /**

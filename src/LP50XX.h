@@ -2,7 +2,7 @@
  * @file LP50XX.h
  * @author rneurink (ruben.neurink@gmail.com)
  * @brief 
- * @version 1.0
+ * @version 1.0.1
  * @date 2021-07-04
  * 
  * @copyright Copyright (c) 2021
@@ -69,31 +69,48 @@ enum EAddressType {
 #define LED5_BRIGHTNESS 0x0C    // Contains the brightness level for LED 5
 #define LED6_BRIGHTNESS 0x0D    // Contains the brightness level for LED 6
 #define LED7_BRIGHTNESS 0x0E    // Contains the brightness level for LED 7
-#define OUT0_COLOR 0x0F         // Contains the color value for output 0
-#define OUT1_COLOR 0x10         // Contains the color value for output 1
-#define OUT2_COLOR 0x11         // Contains the color value for output 2
-#define OUT3_COLOR 0x12         // Contains the color value for output 3
-#define OUT4_COLOR 0x13         // Contains the color value for output 4
-#define OUT5_COLOR 0x14         // Contains the color value for output 5
-#define OUT6_COLOR 0x15         // Contains the color value for output 6
-#define OUT7_COLOR 0x16         // Contains the color value for output 7
-#define OUT8_COLOR 0x17         // Contains the color value for output 8
-#define OUT9_COLOR 0x18         // Contains the color value for output 9 (only on the LP5012)
-#define OUT10_COLOR 0x19        // Contains the color value for output 10 (only on the LP5012)
-#define OUT11_COLOR 0x1A        // Contains the color value for output 11 (only on the LP5012)
-#define OUT12_COLOR 0x1B        // Contains the color value for output 12
-#define OUT13_COLOR 0x1C        // Contains the color value for output 13
-#define OUT14_COLOR 0x1D        // Contains the color value for output 14
-#define OUT15_COLOR 0x1E        // Contains the color value for output 15
-#define OUT16_COLOR 0x1F        // Contains the color value for output 16
-#define OUT17_COLOR 0x20        // Contains the color value for output 17
-#define OUT18_COLOR 0x21        // Contains the color value for output 18
-#define OUT19_COLOR 0x22        // Contains the color value for output 19
-#define OUT20_COLOR 0x23        // Contains the color value for output 20
-#define OUT21_COLOR 0x24        // Contains the color value for output 21
-#define OUT22_COLOR 0x25        // Contains the color value for output 22
-#define OUT23_COLOR 0x26        // Contains the color value for output 23
-#define RESET_REGISTERS 0x27    // Resets all the registers to their default values
+// #define OUT0_COLOR 0x0F         // Contains the color value for output 0
+// #define OUT1_COLOR 0x10         // Contains the color value for output 1
+// #define OUT2_COLOR 0x11         // Contains the color value for output 2
+// #define OUT3_COLOR 0x12         // Contains the color value for output 3
+// #define OUT4_COLOR 0x13         // Contains the color value for output 4
+// #define OUT5_COLOR 0x14         // Contains the color value for output 5
+// #define OUT6_COLOR 0x15         // Contains the color value for output 6
+// #define OUT7_COLOR 0x16         // Contains the color value for output 7
+// #define OUT8_COLOR 0x17         // Contains the color value for output 8
+// #define OUT9_COLOR 0x18         // Contains the color value for output 9 (only on the LP5012)
+// #define OUT10_COLOR 0x19        // Contains the color value for output 10 (only on the LP5012)
+// #define OUT11_COLOR 0x1A        // Contains the color value for output 11 (only on the LP5012)
+// #define OUT12_COLOR 0x1B        // Contains the color value for output 12
+// #define OUT13_COLOR 0x1C        // Contains the color value for output 13
+// #define OUT14_COLOR 0x1D        // Contains the color value for output 14
+// #define OUT15_COLOR 0x1E        // Contains the color value for output 15
+// #define OUT16_COLOR 0x1F        // Contains the color value for output 16
+// #define OUT17_COLOR 0x20        // Contains the color value for output 17
+// #define OUT18_COLOR 0x21        // Contains the color value for output 18
+// #define OUT19_COLOR 0x22        // Contains the color value for output 19
+// #define OUT20_COLOR 0x23        // Contains the color value for output 20
+// #define OUT21_COLOR 0x24        // Contains the color value for output 21
+// #define OUT22_COLOR 0x25        // Contains the color value for output 22
+// #define OUT23_COLOR 0x26        // Contains the color value for output 23
+// #define RESET_REGISTERS 0x27    // Resets all the registers to their default values
+// LP5009/LP5012 output PWM registers (TI SLVSEH2B)
+// NOTE: These parts have OUT0..OUT8 (LP5009) and OUT0..OUT11 (LP5012)
+#define OUT0_COLOR 0x0B         // Output 0 PWM
+#define OUT1_COLOR 0x0C         // Output 1 PWM
+#define OUT2_COLOR 0x0D         // Output 2 PWM
+#define OUT3_COLOR 0x0E         // Output 3 PWM
+#define OUT4_COLOR 0x0F         // Output 4 PWM
+#define OUT5_COLOR 0x10         // Output 5 PWM
+#define OUT6_COLOR 0x11         // Output 6 PWM
+#define OUT7_COLOR 0x12         // Output 7 PWM
+#define OUT8_COLOR 0x13         // Output 8 PWM
+#define OUT9_COLOR 0x14         // Output 9 PWM (LP5012 only)
+#define OUT10_COLOR 0x15        // Output 10 PWM (LP5012 only)
+#define OUT11_COLOR 0x16        // Output 11 PWM (LP5012 only)
+
+#define RESET_REGISTERS 0x17    // Reset all registers to defaults
+
 
 /**
  * @brief Class to communicate with the LP5009 or LP5012
